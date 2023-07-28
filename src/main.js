@@ -136,7 +136,7 @@ const checkCollision = () => {
     const neckIndex = snake.length - 2
     const wallCollision = head.x < 0 || head.x > 570 || head.y < 0 || head.y > 570
     const selfCollision = snake.find((position, index) => {
-        return  index < neckIndex && position.x == head.x && position.y == y
+        return  index < neckIndex && position.x == head.x && position.y == head.y
     })
 
     if(wallCollision || selfCollision) {
